@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>匯率</title>
+</head>
+<body>
+<div>
+    <h1>即時匯率</h1>
+    <p th:text="'最後更新時間：' + ${lastUpdateTime}"></p>
+</div>
+<div th:each="exchangeRate : ${exchangeRates}">
+    <div>
+        <h3 th:text="'從 ' + ${exchangeRate.fromCurrency} + ' 轉換 ' + ${exchangeRate.toCurrency} + ' ： ' + ${exchangeRate.convertResult}"></h3>
+    </div>
+</div>
+
+</body>
+</html>
